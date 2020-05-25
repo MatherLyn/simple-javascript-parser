@@ -1,23 +1,13 @@
 /**
  * 
- *          ,----,                                                                                  
- *        ,/   .`|                                                                                  
- *      ,`   .'  :              ,-.                                                                 
- *    ;    ;     /          ,--/ /|                         ,--,                                    
- *  .'___,/    ,'  ,---.  ,--. :/ |                 ,---, ,--.'|          ,----,            __  ,-. 
- *  |    :     |  '   ,'\ :  : ' /              ,-+-. /  ||  |,         .'   .`|          ,' ,'/ /| 
- *  ;    |.';  ; /   /   ||  '  /      ,---.   ,--.'|'   |`--'_      .'   .'  .'   ,---.  '  | |' | 
- *  `----'  |  |.   ; ,. :'  |  :     /     \ |   |  ,"' |,' ,'|   ,---, '   ./   /     \ |  |   ,' 
- *      '   :  ;'   | |: :|  |   \   /    /  ||   | /  | |'  | |   ;   | .'  /   /    /  |'  :  /   
- *      |   |  ''   | .; :'  : |. \ .    ' / ||   | |  | ||  | :   `---' /  ;--,.    ' / ||  | '    
- *      '   :  ||   :    ||  | ' \ \'   ;   /||   | |  |/ '  : |__   /  /  / .`|'   ;   /|;  : |    
- *      ;   |.'  \   \  / '  : |--' '   |  / ||   | |--'  |  | '.'|./__;     .' '   |  / ||  , ;    
- *      '---'     `----'  ;  |,'    |   :    ||   |/      ;  :    ;;   |  .'    |   :    | ---'     
- *                        '--'       \   \  / '---'       |  ,   / `---'         \   \  /           
- *                                    `----'               ---`-'                 `----'            
- * 
- */ 
-
+ *   _____     _              _ 
+ *  |_   _|   | |            (_)
+ *    | | ___ | | _____ _ __  _ _______ _ __ 
+ *    | |/ _ \| |/ / _ \ '_ \| |_  / _ \ '__|
+ *    | | (_) |   <  __/ | | | |/ /  __/ |
+ *    \_/\___/|_|\_\___|_| |_|_/___\___|_|
+ *
+ */
 
 /**
  * Tokenizer scans and transfers JavaScript code ⬇️
@@ -46,13 +36,13 @@
  * 
  * View util.ts to learn more about Token class
  */
-import { Token } from '../util/util'
+import { Token } from '../util/declares'
 
 /**
  * Use the reserved words to define words in the code while scanning.
  * If the current word is one of these word, make its type 'keyword'.
  */
-import { KEYWORD } from '../util/util'
+import { KEYWORD } from '../util/declares'
 
 /**
  * The token table, an array to store the scanned tokens.
