@@ -7,6 +7,7 @@ npm install
 npm run start
 ```
 
+Use JSON Formatter plugins for beautify the response json.
 
 ## AST means Abstract Syntax Tree. To get an AST, first, we should tokenize the input code.
 ### Here is the demo input file:
