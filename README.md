@@ -7,11 +7,13 @@ npm install
 npm run start
 ```
 
-Use JSON Formatter plugins for beautify the response json.
+Use JSON Formatter plugins to beautify the response json.
 
 ## AST means Abstract Syntax Tree. To get an AST, first, we should tokenize the input code.
 ### Here is the demo input file:
 ```typescript
+// /src/input
+
 const code: string = `
 let a = 123.12123, b, c
 
@@ -22,11 +24,11 @@ const g = 'hello world'
 
 const h = a
 `
-
-export default code
 ```
 ### Here is the output token array:
 ```typescript
+// /src/tokenizer
+
 [
     {"value":"let","type":"keyword"},
     {"value":"a","type":"identifier"},
@@ -54,6 +56,8 @@ export default code
 ## Then we should transform the tokens array to an AST based on JavaScript grammar rules.
 ### Here are some of the rules of the transform.
 ```typescript
+// /src/parser
+
 class VariableDeclaration {
   public type: string = 'VariableDeclaration'
   public declarations: Array<VariableDeclarator> = []
@@ -73,8 +77,12 @@ class VariableDeclarator {
   }
 }
 ```
-### Finally, we generate an AST on our own!
+
+
+## Finally, we generate an AST on our own!
 ```typescript
+// 127.0.0.1:3000
+
 {
   "type":"Program",
   "sourceType":"module",
